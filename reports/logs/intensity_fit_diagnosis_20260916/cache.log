@@ -1,0 +1,15 @@
+/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/best_core/activation.py:8: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)  # cast to float32
+/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/best_core/activation.py:15: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, g):
+/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/data/base_dataset.py:15: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @torch.cuda.amp.autocast(enabled=False)
+Using sequence 4950-5000
+Using sequence 4950-5000
+Loading train data:   0%|          | 0/47 [00:00<?, ?it/s]Loading train data: 100%|██████████| 47/47 [00:00<00:00, 1630.61it/s]
+/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/best_core/scene_field.py:688: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+{"cache_frame": 4950, "range_summary": {"rays": 67980, "gt_valid_count": 50652, "outside_count": 0, "outside_fraction": 0.0, "unreachable_sse": 0.0, "optimistic_projected_gt_valid_rmse": 0.0, "original_gt_valid_sse": 281.69432485981446, "unreachable_fraction_of_original_sse": 0.0, "max_excess": 0.0, "loose_outside_count": 0, "frame_id": 4950}}
+{"cache_frame": 4951, "range_summary": {"rays": 67980, "gt_valid_count": 50390, "outside_count": 0, "outside_fraction": 0.0, "unreachable_sse": 0.0, "optimistic_projected_gt_valid_rmse": 0.0, "original_gt_valid_sse": 297.31186963913876, "unreachable_fraction_of_original_sse": 0.0, "max_excess": 0.0, "loose_outside_count": 0, "frame_id": 4951}}
+{"cache_frame": 4952, "range_summary": {"rays": 67980, "gt_valid_count": 50115, "outside_count": 1, "outside_fraction": 1.995410639210604e-05, "unreachable_sse": 0.01227915589380757, "optimistic_projected_gt_valid_rmse": 0.0004949945180086105, "original_gt_valid_sse": 299.76323398473744, "unreachable_fraction_of_original_sse": 4.096284834728187e-05, "max_excess": 0.11081135272979736, "loose_outside_count": 1, "frame_id": 4952}}
+{"cache_frame": 4953, "range_summary": {"rays": 67980, "gt_valid_count": 49849, "outside_count": 0, "outside_fraction": 0.0, "unreachable_sse": 0.0, "optimistic_projected_gt_valid_rmse": 0.0, "original_gt_valid_sse": 293.57271435893443, "unreachable_fraction_of_original_sse": 0.0, "max_excess": 0.0, "loose_outside_count": 0, "frame_id": 4953}}

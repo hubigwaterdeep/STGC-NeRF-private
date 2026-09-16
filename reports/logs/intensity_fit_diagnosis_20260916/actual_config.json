@@ -1,0 +1,49 @@
+{
+  "preexecution_configuration": "CONFIGURATION.md",
+  "source_snapshot": "/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source",
+  "old_experiment": "/home/zijiewu/Code/basis4D/log/intensity_coefficients_20260915",
+  "frames": [
+    4950,
+    4951,
+    4952,
+    4953
+  ],
+  "split_file": "data_split.json",
+  "schedule_file": "schedule.json",
+  "sampling": {
+    "full_context_rays": 512,
+    "samples_per_ray": 768,
+    "fit_rays_per_update": 128,
+    "perturb": false,
+    "selection_seed": 700,
+    "update_order_seed": 19
+  },
+  "optimizer": {
+    "type": "Adam",
+    "learning_rate": 0.001,
+    "eps": 1e-15,
+    "weight_decay": 0,
+    "schedule": "0.1**min(step/300,1)",
+    "updates_per_arm": 300
+  },
+  "precision": "original AMP fitting; FP32 alternatives read-only",
+  "amp_init_scale": 1,
+  "ema_applied": false,
+  "trainable_parameters": {
+    "T0": 17537,
+    "T1": 37505
+  },
+  "coefficient_parameters": 19968,
+  "evaluation_steps": [
+    0,
+    1,
+    10,
+    50,
+    100,
+    300
+  ],
+  "loss": "0.1*sum(((J-GT_intensity)*GT_return)^2); no final prediction mask in loss",
+  "commands": "EXECUTION_COMMANDS.md",
+  "test_executed": false,
+  "no_further_runs": true
+}

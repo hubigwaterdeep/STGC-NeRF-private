@@ -1,0 +1,33 @@
+{
+  "arms": {
+    "T0": {
+      "actual_updates": 300,
+      "schedule_equal": true,
+      "loss_identity": true,
+      "final_checkpoint_loadable": true,
+      "isolation": {
+        "old_parameters_buffers_unchanged": true,
+        "all_fixed_teacher_arrays_unchanged": true,
+        "original_refiner_input_and_probability_unchanged": true,
+        "no_val_test_or_geometry_rerender": true
+      }
+    },
+    "T1": {
+      "actual_updates": 300,
+      "schedule_equal": true,
+      "loss_identity": true,
+      "final_checkpoint_loadable": true,
+      "isolation": {
+        "old_parameters_buffers_unchanged": true,
+        "all_fixed_teacher_arrays_unchanged": true,
+        "original_refiner_input_and_probability_unchanged": true,
+        "no_val_test_or_geometry_rerender": true
+      }
+    }
+  },
+  "common_zero_metrics": true,
+  "fit_probe_disjoint": true,
+  "source": "this diagnosis only, not repeated historical full validation",
+  "no_val_test": true,
+  "no_model_promotion": true
+}

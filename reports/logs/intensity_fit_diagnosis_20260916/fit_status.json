@@ -1,0 +1,6 @@
+{
+  "state": "completed",
+  "actual_updates_per_arm": 300,
+  "no_val_test_loaded": true,
+  "stop_after_this_diagnosis": true
+}

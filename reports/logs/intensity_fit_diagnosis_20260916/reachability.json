@@ -1,0 +1,325 @@
+{
+  "activation": "unbounded-logit correction then sigmoid, no explicit delta bound",
+  "interval": "[0,sum(original weights*actual support)]",
+  "loose_interval": "[0,sum(original weights)]",
+  "bounded_delta": false,
+  "tighter_delta_bound": null,
+  "scope": "four TRAIN full frames and preselected fixed blocks, not all47",
+  "full_train_frames": [
+    {
+      "rays": 67980,
+      "gt_valid_count": 50652,
+      "outside_count": 0,
+      "outside_fraction": 0.0,
+      "unreachable_sse": 0.0,
+      "optimistic_projected_gt_valid_rmse": 0.0,
+      "original_gt_valid_sse": 281.69432485981446,
+      "unreachable_fraction_of_original_sse": 0.0,
+      "max_excess": 0.0,
+      "upper": {
+        "count": 50652,
+        "p50": 0.9984051287174225,
+        "p95": 0.999998152256012,
+        "max": 1.000000238418579,
+        "nonzero_fraction": 1.0,
+        "signed_mean": 0.9876146467787521,
+        "l2": 222.30097018816892
+      },
+      "loose_outside_count": 0,
+      "frame_id": 4950
+    },
+    {
+      "rays": 67980,
+      "gt_valid_count": 50390,
+      "outside_count": 0,
+      "outside_fraction": 0.0,
+      "unreachable_sse": 0.0,
+      "optimistic_projected_gt_valid_rmse": 0.0,
+      "original_gt_valid_sse": 297.31186963913876,
+      "unreachable_fraction_of_original_sse": 0.0,
+      "max_excess": 0.0,
+      "upper": {
+        "count": 50390,
+        "p50": 0.9982775151729584,
+        "p95": 0.9999977946281433,
+        "max": 1.0000001192092896,
+        "nonzero_fraction": 1.0,
+        "signed_mean": 0.9874934920362831,
+        "l2": 221.69943448134725
+      },
+      "loose_outside_count": 0,
+      "frame_id": 4951
+    },
+    {
+      "rays": 67980,
+      "gt_valid_count": 50115,
+      "outside_count": 1,
+      "outside_fraction": 1.995410639210604e-05,
+      "unreachable_sse": 0.01227915589380757,
+      "optimistic_projected_gt_valid_rmse": 0.0004949945180086105,
+      "original_gt_valid_sse": 299.76323398473744,
+      "unreachable_fraction_of_original_sse": 4.096284834728187e-05,
+      "max_excess": 0.11081135272979736,
+      "upper": {
+        "count": 50115,
+        "p50": 0.9984528422355652,
+        "p95": 0.9999979138374329,
+        "max": 1.0000001192092896,
+        "nonzero_fraction": 1.0,
+        "signed_mean": 0.9869369106486352,
+        "l2": 220.97797793799967
+      },
+      "loose_outside_count": 1,
+      "frame_id": 4952
+    },
+    {
+      "rays": 67980,
+      "gt_valid_count": 49849,
+      "outside_count": 0,
+      "outside_fraction": 0.0,
+      "unreachable_sse": 0.0,
+      "optimistic_projected_gt_valid_rmse": 0.0,
+      "original_gt_valid_sse": 293.57271435893443,
+      "unreachable_fraction_of_original_sse": 0.0,
+      "max_excess": 0.0,
+      "upper": {
+        "count": 49849,
+        "p50": 0.9986416697502136,
+        "p95": 0.9999980926513672,
+        "max": 1.0000001192092896,
+        "nonzero_fraction": 1.0,
+        "signed_mean": 0.9866688667486734,
+        "l2": 220.33388436405522
+      },
+      "loose_outside_count": 0,
+      "frame_id": 4953
+    }
+  ],
+  "fixed_blocks": [
+    {
+      "frame_id": 4950,
+      "block": 32,
+      "subset": "fit",
+      "rays": 512,
+      "gt_valid_count": 471,
+      "outside_count": 0,
+      "outside_fraction": 0.0,
+      "unreachable_sse": 0.0,
+      "optimistic_projected_gt_valid_rmse": 0.0,
+      "original_gt_valid_sse": 5.015386983802615,
+      "unreachable_fraction_of_original_sse": 0.0,
+      "max_excess": 0.0,
+      "upper": {
+        "count": 471,
+        "p50": 0.9998756647109985,
+        "p95": 0.9999992549419403,
+        "max": 1.0,
+        "nonzero_fraction": 1.0,
+        "signed_mean": 0.9987337842362195,
+        "l2": 21.675191052976178
+      },
+      "loose_outside_count": 0
+    },
+    {
+      "frame_id": 4950,
+      "block": 86,
+      "subset": "probe",
+      "rays": 512,
+      "gt_valid_count": 395,
+      "outside_count": 0,
+      "outside_fraction": 0.0,
+      "unreachable_sse": 0.0,
+      "optimistic_projected_gt_valid_rmse": 0.0,
+      "original_gt_valid_sse": 0.7578018055538626,
+      "unreachable_fraction_of_original_sse": 0.0,
+      "max_excess": 0.0,
+      "upper": {
+        "count": 395,
+        "p50": 0.975780725479126,
+        "p95": 0.987071031332016,
+        "max": 0.9902007579803467,
+        "nonzero_fraction": 1.0,
+        "signed_mean": 0.9740694064128248,
+        "l2": 19.360478107365136
+      },
+      "loose_outside_count": 0
+    },
+    {
+      "frame_id": 4951,
+      "block": 60,
+      "subset": "fit",
+      "rays": 512,
+      "gt_valid_count": 460,
+      "outside_count": 0,
+      "outside_fraction": 0.0,
+      "unreachable_sse": 0.0,
+      "optimistic_projected_gt_valid_rmse": 0.0,
+      "original_gt_valid_sse": 1.9931054649657431,
+      "unreachable_fraction_of_original_sse": 0.0,
+      "max_excess": 0.0,
+      "upper": {
+        "count": 460,
+        "p50": 0.9933200180530548,
+        "p95": 0.9999639362096786,
+        "max": 0.9999996423721313,
+        "nonzero_fraction": 1.0,
+        "signed_mean": 0.9913519434306932,
+        "l2": 21.262993399241836
+      },
+      "loose_outside_count": 0
+    },
+    {
+      "frame_id": 4951,
+      "block": 127,
+      "subset": "probe",
+      "rays": 512,
+      "gt_valid_count": 254,
+      "outside_count": 0,
+      "outside_fraction": 0.0,
+      "unreachable_sse": 0.0,
+      "optimistic_projected_gt_valid_rmse": 0.0,
+      "original_gt_valid_sse": 1.2236781294571184,
+      "unreachable_fraction_of_original_sse": 0.0,
+      "max_excess": 0.0,
+      "upper": {
+        "count": 254,
+        "p50": 0.9659281969070435,
+        "p95": 0.9877953112125397,
+        "max": 0.9965730905532837,
+        "nonzero_fraction": 1.0,
+        "signed_mean": 0.9640464604370237,
+        "l2": 15.36631502948175
+      },
+      "loose_outside_count": 0
+    },
+    {
+      "frame_id": 4952,
+      "block": 29,
+      "subset": "fit",
+      "rays": 512,
+      "gt_valid_count": 456,
+      "outside_count": 0,
+      "outside_fraction": 0.0,
+      "unreachable_sse": 0.0,
+      "optimistic_projected_gt_valid_rmse": 0.0,
+      "original_gt_valid_sse": 3.859399055308903,
+      "unreachable_fraction_of_original_sse": 0.0,
+      "max_excess": 0.0,
+      "upper": {
+        "count": 456,
+        "p50": 0.9999184012413025,
+        "p95": 0.999998539686203,
+        "max": 1.0,
+        "nonzero_fraction": 1.0,
+        "signed_mean": 0.9994023795190611,
+        "l2": 21.341414766299717
+      },
+      "loose_outside_count": 0
+    },
+    {
+      "frame_id": 4952,
+      "block": 120,
+      "subset": "probe",
+      "rays": 512,
+      "gt_valid_count": 223,
+      "outside_count": 0,
+      "outside_fraction": 0.0,
+      "unreachable_sse": 0.0,
+      "optimistic_projected_gt_valid_rmse": 0.0,
+      "original_gt_valid_sse": 1.5846489026627537,
+      "unreachable_fraction_of_original_sse": 0.0,
+      "max_excess": 0.0,
+      "upper": {
+        "count": 223,
+        "p50": 0.9504976272583008,
+        "p95": 0.9586377322673798,
+        "max": 0.962429404258728,
+        "nonzero_fraction": 1.0,
+        "signed_mean": 0.9510418922377274,
+        "l2": 14.20222711396481
+      },
+      "loose_outside_count": 0
+    },
+    {
+      "frame_id": 4953,
+      "block": 44,
+      "subset": "fit",
+      "rays": 512,
+      "gt_valid_count": 448,
+      "outside_count": 0,
+      "outside_fraction": 0.0,
+      "unreachable_sse": 0.0,
+      "optimistic_projected_gt_valid_rmse": 0.0,
+      "original_gt_valid_sse": 3.816573518341837,
+      "unreachable_fraction_of_original_sse": 0.0,
+      "max_excess": 0.0,
+      "upper": {
+        "count": 448,
+        "p50": 0.9996480345726013,
+        "p95": 0.9999980509281159,
+        "max": 1.0,
+        "nonzero_fraction": 1.0,
+        "signed_mean": 0.997971505591912,
+        "l2": 21.12317998506803
+      },
+      "loose_outside_count": 0
+    },
+    {
+      "frame_id": 4953,
+      "block": 51,
+      "subset": "probe",
+      "rays": 512,
+      "gt_valid_count": 313,
+      "outside_count": 0,
+      "outside_fraction": 0.0,
+      "unreachable_sse": 0.0,
+      "optimistic_projected_gt_valid_rmse": 0.0,
+      "original_gt_valid_sse": 1.9943567479714819,
+      "unreachable_fraction_of_original_sse": 0.0,
+      "max_excess": 0.0,
+      "upper": {
+        "count": 313,
+        "p50": 0.9967347383499146,
+        "p95": 0.9999987602233886,
+        "max": 1.0,
+        "nonzero_fraction": 1.0,
+        "signed_mean": 0.9954334762149726,
+        "l2": 17.61121546730078
+      },
+      "loose_outside_count": 0
+    }
+  ],
+  "caveat": "Independent sample/ray relaxation only; not a deployable model or evidence of attainable shared-field fitting.",
+  "full_train_frames_aggregate": {
+    "gt_valid_count": 201006,
+    "outside_count": 1,
+    "outside_fraction": 4.974975871367024e-06,
+    "unreachable_sse": 0.01227915589380757,
+    "optimistic_projected_gt_valid_rmse": 0.00024716088746492,
+    "original_gt_valid_sse": 1172.342142842625,
+    "unreachable_fraction_of_original_sse": 1.0474037778795368e-05
+  },
+  "fixed_blocks_aggregate": {
+    "gt_valid_count": 3020,
+    "outside_count": 0,
+    "outside_fraction": 0.0,
+    "unreachable_sse": 0.0,
+    "optimistic_projected_gt_valid_rmse": 0.0,
+    "original_gt_valid_sse": 20.244950608064315,
+    "unreachable_fraction_of_original_sse": 0.0
+  },
+  "fit_probe_aggregate": {
+    "fit": {
+      "gt_valid_count": 1835,
+      "outside_count": 0,
+      "unreachable_sse": 0.0,
+      "optimistic_gt_valid_rmse": 0.0
+    },
+    "probe": {
+      "gt_valid_count": 1185,
+      "outside_count": 0,
+      "unreachable_sse": 0.0,
+      "optimistic_gt_valid_rmse": 0.0
+    }
+  }
+}
