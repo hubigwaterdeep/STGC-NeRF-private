@@ -1,0 +1,10 @@
+/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/best_core/activation.py:8: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)  # cast to float32
+/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/best_core/activation.py:15: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, g):
+/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/best_core/scene_field.py:688: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+all_modal 69.36985001084395
+hybrid44 76.70549899921753
+hybrid44_untied 78.1747120199725
+hybrid44_neural 81.73798798816279

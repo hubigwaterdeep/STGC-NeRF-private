@@ -1,0 +1,52 @@
+{
+  "scope": "illustrative uniform times, one projection/level, fixed position, pre-flow",
+  "standard_shape": [
+    51,
+    32
+  ],
+  "standard_numerical_rank": 29,
+  "tolerance": 2.882829577381513e-14,
+  "standard_singular_values": [
+    2.5457078844054952,
+    2.5308120833363845,
+    2.093312152384352,
+    2.0110030850872405,
+    1.7891448310923292,
+    1.5521066055709745,
+    1.4513930841469305,
+    1.426101970001492,
+    0.5385648842615167,
+    0.5143623067892817,
+    0.46204485882603136,
+    0.26076394572283457,
+    0.17544124040752956,
+    0.12210687654724896,
+    0.05902968720638078,
+    0.01772929779232009,
+    0.01596812791342111,
+    0.013329422540931769,
+    0.009686111007220959,
+    0.008511342527904973,
+    0.006206230968121252,
+    0.004525408966195599,
+    0.00047594416598813416,
+    0.0002507483612606608,
+    0.00017971458360050964,
+    0.00011418326884062216,
+    9.971102717162212e-05,
+    5.117858689045957e-05,
+    4.878503873016797e-05,
+    1.0352489246433306e-16,
+    7.949090041165015e-17,
+    3.694861235961709e-17
+  ],
+  "tied_rank8_modal_hash_span_upper_bound_when_cap_inactive": 8,
+  "independent_low8_high8_modal_hash_span_upper_bound_when_cap_inactive": 16,
+  "caveats": [
+    "No dataset, checkpoint, CUDA forward pass or training is used.",
+    "The bound is conditional on a fixed learned temporal dictionary and an inactive query-dependent RMS cap.",
+    "Flow-warped spatial queries, products, nonlinear decoders and other branches can enlarge the final function class.",
+    "Replacing C(x) by MLP(z(x), x) alone does not enlarge its fixed temporal dictionary span.",
+    "Exact rank is not an effective-rank or conditioning diagnosis; inspect the full spectrum with actual trained models."
+  ]
+}

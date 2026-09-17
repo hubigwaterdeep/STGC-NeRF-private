@@ -1,0 +1,23 @@
+/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/best_core/activation.py:8: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)  # cast to float32
+/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/best_core/activation.py:15: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, g):
+test_config_validation (test_representation.AlgebraTests) ... ok
+test_lagrange_endpoints_and_partition (test_representation.AlgebraTests) ... ok
+test_all_modal_matches_old_forward_and_gradients (test_representation.RepresentationTests) ... /home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/best_core/scene_field.py:688: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+ok
+test_checkpoint_contract_and_renderer_backward (test_representation.RepresentationTests) ... ok
+test_empty_and_single_modal_splits (test_representation.RepresentationTests) ... ok
+test_flow_neighbor_semantics_and_no_grad_policy (test_representation.RepresentationTests) ... ok
+test_hybrid_keeps_shared_initialization_and_modal_prefix (test_representation.RepresentationTests) ... ok
+test_neural_role_domain_and_interpolate_then_decode (test_representation.RepresentationTests) ... ok
+test_parameter_groups_and_all_selected_paths_receive_gradients (test_representation.RepresentationTests) ... ok
+test_spatial_lattice_and_original_hash_interpolation (test_representation.RepresentationTests) ... ok
+test_wrapper_preserves_shared_heads_and_rng (test_representation.RepresentationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.158s
+
+OK
+selected/original forward maximum absolute difference: 2.384185791015625e-07

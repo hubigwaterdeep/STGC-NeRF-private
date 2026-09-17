@@ -1,0 +1,8 @@
+{
+  "modal_levels": 4,
+  "coefficients": "neural",
+  "latent_dim": 4,
+  "decoder_width": 32,
+  "embedding_dim": 4,
+  "spatial_frequencies": 2
+}

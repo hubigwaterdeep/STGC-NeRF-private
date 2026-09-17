@@ -1,0 +1,11 @@
+{
+  "teacher_path": "/home/zijiewu/Code/basis4D-intensity-mtl-diagnosis/flow/checkpoints/FTD_o.pth",
+  "class_name": "flow.gmsf.GMSF",
+  "strict_load": true,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "parameters": 7066752,
+  "scene_checkpoint_loaded": false,
+  "file_digests_computed": false,
+  "runner_import": true
+}

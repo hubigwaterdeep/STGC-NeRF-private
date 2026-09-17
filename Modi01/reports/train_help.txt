@@ -1,0 +1,219 @@
+usage: train.py [-h] [--config CONFIG] [--workspace WORKSPACE] [--refine]
+                [--test] [--test_eval] [--seed SEED]
+                [--field_backend {best,lidar4d}] [--init_best INIT_BEST]
+                [--split_protocol {legacy,v4_disjoint}]
+                [--final_eval_split {val,test}]
+                [--max_train_steps MAX_TRAIN_STEPS] [--skip_refine]
+                [--skip_final_eval] [--refine_steps REFINE_STEPS]
+                [--refine_lr REFINE_LR] [--refine_init_seed REFINE_INIT_SEED]
+                [--refine_loss_preset {hard_target_probability_bce,bce_expected_masked_depth_support_v1,bce_depth_intensity_risk_v1}]
+                [--intensity_feature_mode {none,base,delta}]
+                [--alpha_intensity_gradient ALPHA_INTENSITY_GRADIENT]
+                [--alpha_spline_knots ALPHA_SPLINE_KNOTS]
+                [--alpha_high_order_regularization ALPHA_HIGH_ORDER_REGULARIZATION]
+                [--amp_init_scale AMP_INIT_SCALE]
+                [--dataloader {kitti360,nuScenes}] [--path PATH]
+                [--sequence_id SEQUENCE_ID] [--preload PRELOAD]
+                [--bound BOUND] [--scale SCALE] [--offset [OFFSET ...]]
+                [--near_lidar NEAR_LIDAR] [--far_lidar FAR_LIDAR]
+                [--fov_lidar [FOV_LIDAR ...]] [--num_frames NUM_FRAMES]
+                [--min_resolution MIN_RESOLUTION]
+                [--base_resolution BASE_RESOLUTION]
+                [--max_resolution MAX_RESOLUTION]
+                [--time_resolution TIME_RESOLUTION]
+                [--n_levels_plane N_LEVELS_PLANE]
+                [--n_features_per_level_plane N_FEATURES_PER_LEVEL_PLANE]
+                [--n_levels_hash N_LEVELS_HASH]
+                [--n_features_per_level_hash N_FEATURES_PER_LEVEL_HASH]
+                [--log2_hashmap_size LOG2_HASHMAP_SIZE]
+                [--num_layers_flow NUM_LAYERS_FLOW]
+                [--hidden_dim_flow HIDDEN_DIM_FLOW]
+                [--num_layers_sigma NUM_LAYERS_SIGMA]
+                [--hidden_dim_sigma HIDDEN_DIM_SIGMA]
+                [--geo_feat_dim GEO_FEAT_DIM]
+                [--num_layers_lidar NUM_LAYERS_LIDAR]
+                [--hidden_dim_lidar HIDDEN_DIM_LIDAR]
+                [--out_lidar_dim OUT_LIDAR_DIM] [--depth_loss DEPTH_LOSS]
+                [--depth_grad_loss DEPTH_GRAD_LOSS]
+                [--intensity_loss INTENSITY_LOSS]
+                [--raydrop_loss RAYDROP_LOSS] [--flow_loss FLOW_LOSS]
+                [--grad_loss GRAD_LOSS] [--alpha_d ALPHA_D]
+                [--alpha_i ALPHA_I] [--alpha_r ALPHA_R]
+                [--alpha_grad ALPHA_GRAD] [--alpha_grad_norm ALPHA_GRAD_NORM]
+                [--alpha_spatial ALPHA_SPATIAL] [--alpha_tv ALPHA_TV]
+                [--grad_norm_smooth] [--spatial_smooth] [--tv_loss]
+                [--sobel_grad] [--urf_loss] [--active_sensor]
+                [--density_scale DENSITY_SCALE]
+                [--intensity_scale INTENSITY_SCALE]
+                [--raydrop_ratio RAYDROP_RATIO]
+                [--smooth_factor SMOOTH_FACTOR] [--iters ITERS] [--lr LR]
+                [--fp16 FP16] [--eval_interval EVAL_INTERVAL] [--ckpt CKPT]
+                [--num_rays_lidar NUM_RAYS_LIDAR] [--num_steps NUM_STEPS]
+                [--patch_size_lidar PATCH_SIZE_LIDAR]
+                [--change_patch_size_lidar CHANGE_PATCH_SIZE_LIDAR [CHANGE_PATCH_SIZE_LIDAR ...]]
+                [--change_patch_size_epoch CHANGE_PATCH_SIZE_EPOCH]
+                [--ema_decay EMA_DECAY] [--feat_g_loss] [--feat_d_loss]
+                [--feat_g_scale FEAT_G_SCALE] [--feat_d_scale FEAT_D_SCALE]
+                [--knn_pt KNN_PT] [--flow_consis_loss] [--consis_flow_loss]
+                [--flow_consis_scale FLOW_CONSIS_SCALE]
+                [--consis_flow_scale CONSIS_FLOW_SCALE]
+                [--feature_channels FEATURE_CHANNELS] [--backbone BACKBONE]
+                [--ffn_dim_expansion FFN_DIM_EXPANSION]
+                [--num_transformer_pt_layers NUM_TRANSFORMER_PT_LAYERS]
+                [--num_transformer_layers NUM_TRANSFORMER_LAYERS]
+                [--resume RESUME] [--strict_resume]
+                [--representation REPRESENTATION] [--prepare-only]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --config CONFIG       config file path
+  --workspace WORKSPACE
+  --refine              refine mode
+  --test                test mode
+  --test_eval           test and eval mode
+  --seed SEED
+  --field_backend {best,lidar4d}
+  --init_best INIT_BEST
+                        model-only Best initialization; fresh optimizer and
+                        counters
+  --split_protocol {legacy,v4_disjoint}
+  --final_eval_split {val,test}
+  --max_train_steps MAX_TRAIN_STEPS
+                        exact optimizer-step cap; zero uses iters
+  --skip_refine
+  --skip_final_eval
+  --refine_steps REFINE_STEPS
+  --refine_lr REFINE_LR
+  --refine_init_seed REFINE_INIT_SEED
+  --refine_loss_preset {hard_target_probability_bce,bce_expected_masked_depth_support_v1,bce_depth_intensity_risk_v1}
+  --intensity_feature_mode {none,base,delta}
+  --alpha_intensity_gradient ALPHA_INTENSITY_GRADIENT
+  --alpha_spline_knots ALPHA_SPLINE_KNOTS
+  --alpha_high_order_regularization ALPHA_HIGH_ORDER_REGULARIZATION
+  --amp_init_scale AMP_INIT_SCALE
+  --dataloader {kitti360,nuScenes}
+  --path PATH           dataset root path
+  --sequence_id SEQUENCE_ID
+  --preload PRELOAD     preload all data into GPU, accelerate training but use
+                        more GPU memory
+  --bound BOUND         assume the scene is bounded in box[-bound, bound]^3
+  --scale SCALE         scale lidar location into box[-bound, bound]^3
+  --offset [OFFSET ...]
+                        offset of lidar location
+  --near_lidar NEAR_LIDAR
+                        minimum near distance for lidar
+  --far_lidar FAR_LIDAR
+                        maximum far distance for lidar
+  --fov_lidar [FOV_LIDAR ...]
+                        fov up and fov range of lidar
+  --num_frames NUM_FRAMES
+                        total number of sequence frames
+  --min_resolution MIN_RESOLUTION
+                        minimum resolution for planes
+  --base_resolution BASE_RESOLUTION
+                        minimum resolution for hash grid
+  --max_resolution MAX_RESOLUTION
+                        maximum resolution for hash grid
+  --time_resolution TIME_RESOLUTION
+                        temporal resolution
+  --n_levels_plane N_LEVELS_PLANE
+                        n_levels for planes
+  --n_features_per_level_plane N_FEATURES_PER_LEVEL_PLANE
+                        n_features_per_level for planes
+  --n_levels_hash N_LEVELS_HASH
+                        n_levels for hash grid
+  --n_features_per_level_hash N_FEATURES_PER_LEVEL_HASH
+                        n_features_per_level for hash grid
+  --log2_hashmap_size LOG2_HASHMAP_SIZE
+                        hashmap size for hash grid
+  --num_layers_flow NUM_LAYERS_FLOW
+                        num_layers of flownet
+  --hidden_dim_flow HIDDEN_DIM_FLOW
+                        hidden_dim of flownet
+  --num_layers_sigma NUM_LAYERS_SIGMA
+                        num_layers of sigmanet
+  --hidden_dim_sigma HIDDEN_DIM_SIGMA
+                        hidden_dim of sigmanet
+  --geo_feat_dim GEO_FEAT_DIM
+                        geo_feat_dim of sigmanet
+  --num_layers_lidar NUM_LAYERS_LIDAR
+                        num_layers of intensity/raydrop
+  --hidden_dim_lidar HIDDEN_DIM_LIDAR
+                        hidden_dim of intensity/raydrop
+  --out_lidar_dim OUT_LIDAR_DIM
+                        output dim for lidar intensity/raydrop
+  --depth_loss DEPTH_LOSS
+                        l1, bce, mse, huber
+  --depth_grad_loss DEPTH_GRAD_LOSS
+                        l1, bce, mse, huber
+  --intensity_loss INTENSITY_LOSS
+                        l1, bce, mse, huber
+  --raydrop_loss RAYDROP_LOSS
+                        l1, bce, mse, huber
+  --flow_loss FLOW_LOSS
+  --grad_loss GRAD_LOSS
+  --alpha_d ALPHA_D
+  --alpha_i ALPHA_I
+  --alpha_r ALPHA_R
+  --alpha_grad ALPHA_GRAD
+  --alpha_grad_norm ALPHA_GRAD_NORM
+  --alpha_spatial ALPHA_SPATIAL
+  --alpha_tv ALPHA_TV
+  --grad_norm_smooth
+  --spatial_smooth
+  --tv_loss
+  --sobel_grad
+  --urf_loss            enable line-of-sight loss in URF.
+  --active_sensor       enable volume rendering for active sensor.
+  --density_scale DENSITY_SCALE
+  --intensity_scale INTENSITY_SCALE
+  --raydrop_ratio RAYDROP_RATIO
+  --smooth_factor SMOOTH_FACTOR
+  --iters ITERS         training iters
+  --lr LR               initial learning rate
+  --fp16 FP16           use amp mixed precision training
+  --eval_interval EVAL_INTERVAL
+  --ckpt CKPT
+  --num_rays_lidar NUM_RAYS_LIDAR
+                        num rays sampled per image for each training step
+  --num_steps NUM_STEPS
+                        num steps sampled per ray
+  --patch_size_lidar PATCH_SIZE_LIDAR
+                        [experimental] render patches in training.1 means
+                        disabled, use [64, 32, 16] to enable
+  --change_patch_size_lidar CHANGE_PATCH_SIZE_LIDAR [CHANGE_PATCH_SIZE_LIDAR ...]
+                        [experimental] render patches in training. default=[2,
+                        8]1 means disabled, use [64, 32, 16] to enable, change
+                        during training
+  --change_patch_size_epoch CHANGE_PATCH_SIZE_EPOCH
+                        change patch_size intenvel
+  --ema_decay EMA_DECAY
+                        use ema during training
+  --feat_g_loss         Geometric features
+  --feat_d_loss         Deep features
+  --feat_g_scale FEAT_G_SCALE
+                        scale for geometric feature loss
+  --feat_d_scale FEAT_D_SCALE
+                        scale for deep feature loss loss
+  --knn_pt KNN_PT       knn point numbers
+  --flow_consis_loss    scene flow constraint loss1
+  --consis_flow_loss    scene flow constraint loss2
+  --flow_consis_scale FLOW_CONSIS_SCALE
+                        scale for flow loss1
+  --consis_flow_scale CONSIS_FLOW_SCALE
+                        scale for flow loss2
+  --feature_channels FEATURE_CHANNELS
+  --backbone BACKBONE   feature extraction backbone (DGCNN / pointnet / mlp)
+  --ffn_dim_expansion FFN_DIM_EXPANSION
+  --num_transformer_pt_layers NUM_TRANSFORMER_PT_LAYERS
+  --num_transformer_layers NUM_TRANSFORMER_LAYERS
+  --resume RESUME       resume from pretrained model or resume from
+                        unexpectedly terminated training
+  --strict_resume       strict resume while loading pretrained weights
+  --representation REPRESENTATION
+  --prepare-only
+
+Args that start with '--' can also be set in a config file (specified via
+--config). Config file syntax allows: key=value, flag=true, stuff=[a,b,c] (for
+details, see syntax at https://goo.gl/R74nmi). In general, command-line values
+override config file values which override defaults.

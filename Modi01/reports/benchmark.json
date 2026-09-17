@@ -1,0 +1,339 @@
+{
+  "scope": "synthetic raw pre-refiner forward/backward + Adam; not scene training or quality evidence",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.1+cu128",
+  "seed": 20260918,
+  "rays": 128,
+  "samples_per_ray": 64,
+  "warmup_updates": 8,
+  "timed_updates": 5,
+  "includes_flow_teacher": false,
+  "includes_task_regularizers": false,
+  "source": "reports/logs/intensity_fit_diagnosis_20260916/source",
+  "results": {
+    "all_modal": {
+      "configuration": {
+        "modal_levels": 8,
+        "coefficients": "tied",
+        "latent_dim": 4,
+        "decoder_width": 32,
+        "embedding_dim": 4,
+        "spatial_frequencies": 2
+      },
+      "spatial_schedule": {
+        "base": 512,
+        "maximum": 32768,
+        "levels": 8,
+        "factor": 1.8114473285278132,
+        "scales": [
+          511.0,
+          926.4610595703125,
+          1679.0469970703125,
+          3042.316650390625,
+          5511.80810546875,
+          9985.162109375,
+          18088.408203125,
+          32767.01171875
+        ],
+        "resolutions": [
+          512,
+          928,
+          1681,
+          3044,
+          5513,
+          9987,
+          18090,
+          32769
+        ]
+      },
+      "source_class": "Modi01.field.HybridTemporalField",
+      "n_output_dims": 120,
+      "dynamic_hash_outputs": 24,
+      "roles": [
+        "xy",
+        "xz",
+        "yz"
+      ],
+      "inactive_hash_gate_values": 0,
+      "reference_hash_parameters": 12582912,
+      "hash_parameters": 12582912,
+      "hash_parameter_delta": 0,
+      "exact_hash_capacity_match": true,
+      "field_parameters": 46635190,
+      "trainable_parameters": 46635190,
+      "reference_field_parameters": 46635190,
+      "neural_order": "interpolate spatial latent, then nonlinear decode; no time input",
+      "cap_scope": "retained modal levels within each role; inherited RMS formula",
+      "table_parameters": {
+        "low": 12582912,
+        "local_temporal": 0,
+        "independent_high": 0
+      },
+      "neural_parameters": 0,
+      "model_parameters": 53202903,
+      "model_trainable_parameters": 46666934,
+      "peak_allocated_bytes": 921248768,
+      "peak_reserved_bytes": 1090519040,
+      "step_ms_median": 69.36985001084395,
+      "training_rays_per_second": 1845.1820204309356,
+      "inference_rays_per_second": 5263.936233135399,
+      "step_seconds": [
+        0.07022592899738811,
+        0.0687475849990733,
+        0.06844116799766198,
+        0.06936985001084395,
+        0.07016939201275818
+      ],
+      "synthetic_losses": [
+        0.0054857912473380566,
+        0.0049115391448140144,
+        0.005007023457437754,
+        0.004739613272249699,
+        0.00405343621969223
+      ]
+    },
+    "hybrid44": {
+      "configuration": {
+        "modal_levels": 4,
+        "coefficients": "tied",
+        "latent_dim": 4,
+        "decoder_width": 32,
+        "embedding_dim": 4,
+        "spatial_frequencies": 2
+      },
+      "spatial_schedule": {
+        "base": 512,
+        "maximum": 32768,
+        "levels": 8,
+        "factor": 1.8114473285278132,
+        "scales": [
+          511.0,
+          926.4610595703125,
+          1679.0469970703125,
+          3042.316650390625,
+          5511.80810546875,
+          9985.162109375,
+          18088.408203125,
+          32767.01171875
+        ],
+        "resolutions": [
+          512,
+          928,
+          1681,
+          3044,
+          5513,
+          9987,
+          18090,
+          32769
+        ]
+      },
+      "source_class": "Modi01.field.HybridTemporalField",
+      "n_output_dims": 120,
+      "dynamic_hash_outputs": 24,
+      "roles": [
+        "xy",
+        "xz",
+        "yz"
+      ],
+      "inactive_hash_gate_values": 96,
+      "reference_hash_parameters": 12582912,
+      "hash_parameters": 12582912,
+      "hash_parameter_delta": 0,
+      "exact_hash_capacity_match": true,
+      "field_parameters": 46635190,
+      "trainable_parameters": 46635190,
+      "reference_field_parameters": 46635190,
+      "neural_order": "interpolate spatial latent, then nonlinear decode; no time input",
+      "cap_scope": "retained modal levels within each role; inherited RMS formula",
+      "table_parameters": {
+        "low": 6291456,
+        "local_temporal": 6291456,
+        "independent_high": 0
+      },
+      "neural_parameters": 0,
+      "model_parameters": 53202903,
+      "model_trainable_parameters": 46666934,
+      "peak_allocated_bytes": 880104448,
+      "peak_reserved_bytes": 1031798784,
+      "step_ms_median": 76.70549899921753,
+      "training_rays_per_second": 1668.7199962196416,
+      "inference_rays_per_second": 4182.294859331389,
+      "step_seconds": [
+        0.07670549899921753,
+        0.07566947600571439,
+        0.07704063499113545,
+        0.0766686350107193,
+        0.0767567919974681
+      ],
+      "synthetic_losses": [
+        0.005456534679979086,
+        0.004884159192442894,
+        0.0049723354168236256,
+        0.004684769548475742,
+        0.003994347527623177
+      ]
+    },
+    "hybrid44_untied": {
+      "configuration": {
+        "modal_levels": 4,
+        "coefficients": "untied",
+        "latent_dim": 4,
+        "decoder_width": 32,
+        "embedding_dim": 4,
+        "spatial_frequencies": 2
+      },
+      "spatial_schedule": {
+        "base": 512,
+        "maximum": 32768,
+        "levels": 8,
+        "factor": 1.8114473285278132,
+        "scales": [
+          511.0,
+          926.4610595703125,
+          1679.0469970703125,
+          3042.316650390625,
+          5511.80810546875,
+          9985.162109375,
+          18088.408203125,
+          32767.01171875
+        ],
+        "resolutions": [
+          512,
+          928,
+          1681,
+          3044,
+          5513,
+          9987,
+          18090,
+          32769
+        ]
+      },
+      "source_class": "Modi01.field.HybridTemporalField",
+      "n_output_dims": 120,
+      "dynamic_hash_outputs": 24,
+      "roles": [
+        "xy",
+        "xz",
+        "yz"
+      ],
+      "inactive_hash_gate_values": 96,
+      "reference_hash_parameters": 12582912,
+      "hash_parameters": 12582912,
+      "hash_parameter_delta": 0,
+      "exact_hash_capacity_match": true,
+      "field_parameters": 46635190,
+      "trainable_parameters": 46635190,
+      "reference_field_parameters": 46635190,
+      "neural_order": "interpolate spatial latent, then nonlinear decode; no time input",
+      "cap_scope": "retained modal levels within each role; inherited RMS formula",
+      "table_parameters": {
+        "low": 3145728,
+        "local_temporal": 6291456,
+        "independent_high": 3145728
+      },
+      "neural_parameters": 0,
+      "model_parameters": 53202903,
+      "model_trainable_parameters": 46666934,
+      "peak_allocated_bytes": 868307968,
+      "peak_reserved_bytes": 1082130432,
+      "step_ms_median": 78.1747120199725,
+      "training_rays_per_second": 1637.3581263375536,
+      "inference_rays_per_second": 4202.434831456364,
+      "step_seconds": [
+        0.07960062599158846,
+        0.07770170201547444,
+        0.07737875601742417,
+        0.0781747120199725,
+        0.07885980300488882
+      ],
+      "synthetic_losses": [
+        0.005456447601318359,
+        0.004885001108050346,
+        0.004974819254130125,
+        0.0046878959983587265,
+        0.0040009357035160065
+      ]
+    },
+    "hybrid44_neural": {
+      "configuration": {
+        "modal_levels": 4,
+        "coefficients": "neural",
+        "latent_dim": 4,
+        "decoder_width": 32,
+        "embedding_dim": 4,
+        "spatial_frequencies": 2
+      },
+      "spatial_schedule": {
+        "base": 512,
+        "maximum": 32768,
+        "levels": 8,
+        "factor": 1.8114473285278132,
+        "scales": [
+          511.0,
+          926.4610595703125,
+          1679.0469970703125,
+          3042.316650390625,
+          5511.80810546875,
+          9985.162109375,
+          18088.408203125,
+          32767.01171875
+        ],
+        "resolutions": [
+          512,
+          928,
+          1681,
+          3044,
+          5513,
+          9987,
+          18090,
+          32769
+        ]
+      },
+      "source_class": "Modi01.field.HybridTemporalField",
+      "n_output_dims": 120,
+      "dynamic_hash_outputs": 24,
+      "roles": [
+        "xy",
+        "xz",
+        "yz"
+      ],
+      "inactive_hash_gate_values": 96,
+      "reference_hash_parameters": 12582912,
+      "hash_parameters": 12518404,
+      "hash_parameter_delta": -64508,
+      "exact_hash_capacity_match": false,
+      "field_parameters": 46570682,
+      "trainable_parameters": 46570682,
+      "reference_field_parameters": 46635190,
+      "neural_order": "interpolate spatial latent, then nonlinear decode; no time input",
+      "cap_scope": "retained modal levels within each role; inherited RMS formula",
+      "table_parameters": {
+        "low": 3145728,
+        "local_temporal": 6291456,
+        "independent_high": 0
+      },
+      "neural_parameters": 3081220,
+      "model_parameters": 53138395,
+      "model_trainable_parameters": 46602426,
+      "peak_allocated_bytes": 865712640,
+      "peak_reserved_bytes": 998244352,
+      "step_ms_median": 81.73798798816279,
+      "training_rays_per_second": 1565.9793340953881,
+      "inference_rays_per_second": 3619.236319294582,
+      "step_seconds": [
+        0.08485556999221444,
+        0.0815417589910794,
+        0.08054483402520418,
+        0.08173798798816279,
+        0.08255837598699145
+      ],
+      "synthetic_losses": [
+        0.005453871097415686,
+        0.004884682130068541,
+        0.004973782692104578,
+        0.004688974004238844,
+        0.0040002125315368176
+      ]
+    }
+  }
+}
