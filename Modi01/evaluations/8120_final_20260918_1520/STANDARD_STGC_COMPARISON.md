@@ -1,5 +1,7 @@
 # 与标准 STGC 的历史结果对照：KITTI-360 8120
 
+> 本文记录 refinement 前的对照。后续三个候选均已完成标准 BCE refinement，最新数值见 [refinement 后的对比](../../refinements/8120_standard_bce_20260918_1600/REPORT.md)；下文阶段缺口描述保留为当时记录。
+
 当前 neural 只在三个 Modi01 候选中表现最好。与仓库保存的标准 STGC 历史结果相比，它没有取得更好的数值；但双方 refinement 阶段不同，这不是已经完成的同阶段架构对照。
 
 ## 已有结果

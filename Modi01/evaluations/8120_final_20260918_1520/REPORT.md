@@ -1,5 +1,7 @@
 # Modi01：8120 最终 checkpoint 联合评估
 
+> 本文保留 refinement 前的评估结果。随后已按用户要求完成三个候选的标准 BCE refinement，见 [refinement 后的最新报告](../../refinements/8120_standard_bce_20260918_1600/REPORT.md)。
+
 三个方法均完成 30,000 步；以下为最终 epoch 639 checkpoint 的新评估，不是训练中 epoch 600 的旧指标。
 
 本轮优先保留 neural 作为后续候选：五类核心指标的 EMA 开发集均值均最好。

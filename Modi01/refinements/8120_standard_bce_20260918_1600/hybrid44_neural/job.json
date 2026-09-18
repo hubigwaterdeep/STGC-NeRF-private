@@ -1,0 +1,13 @@
+{
+  "variant": "hybrid44_neural",
+  "workspace": "/home/zijiewu/Code/STGC-NeRF-private/Modi01/runs/8120/hybrid44_neural_8120_seed0_20260918_010810",
+  "checkpoint": "/home/zijiewu/Code/STGC-NeRF-private/Modi01/runs/8120/hybrid44_neural_8120_seed0_20260918_010810/checkpoints/stgc_nerf_ep0639.pth",
+  "modi_source": "/home/zijiewu/Code/STGC-NeRF-private/Modi01/queues/8120_seed0_20260918_010810/source/Modi01",
+  "audited_source": "/home/zijiewu/Code/STGC-NeRF-private/Modi01/queues/8120_seed0_20260918_010810/source/audited",
+  "output": "/home/zijiewu/Code/STGC-NeRF-private/Modi01/refinements/8120_standard_bce_20260918_1600/hybrid44_neural",
+  "repository": "/home/zijiewu/Code/STGC-NeRF-private",
+  "pre_evaluation": "/home/zijiewu/Code/STGC-NeRF-private/Modi01/evaluations/8120_final_20260918_1520/hybrid44_neural",
+  "standard_runner": "/home/zijiewu/Code/STGC-NeRF-private/Modi01/refinements/8120_standard_bce_20260918_1600/standard_runner.py",
+  "standard_unet": "/home/zijiewu/Code/STGC-NeRF-private/Modi01/refinements/8120_standard_bce_20260918_1600/standard_unet.py",
+  "evaluation_source": "/home/zijiewu/Code/STGC-NeRF-private/Modi01/refinements/8120_standard_bce_20260918_1600/evaluation_support.py"
+}

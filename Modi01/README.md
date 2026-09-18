@@ -71,6 +71,22 @@ PYTHONDONTWRITEBYTECODE=1 .venv/bin/python Modi01/summarize_evaluation.py \
   Modi01/evaluations/<新目录>
 ```
 
-每个方法在独立进程中载入其归档源码和最终 checkpoint，调用原 Trainer 的评估步骤及指标。输出包含主表、逐帧 CSV、距离/深度边缘诊断和开发帧原始预测。历史已观察场景按 post-hoc development 处理；legacy val/test 使用相同帧，不能宣称拥有未见测试集。当前 refiner 未训练，因此只评估 pre-refiner；缺少 moving/static 标签时明确标为 unavailable。all-modal 配置尚未在本轮训练，三个候选比较不能代替原始基线对照。
+每个方法在独立进程中载入其归档源码和最终 checkpoint，调用原 Trainer 的评估步骤及指标。输出包含主表、逐帧 CSV、距离/深度边缘诊断和开发帧原始预测。历史已观察场景按 post-hoc development 处理；legacy val/test 使用相同帧，不能宣称拥有未见测试集。上述首次评估时 refiner 尚未训练，只包含 pre-refiner；后续补跑结果见下节。缺少 moving/static 标签时明确标为 unavailable。all-modal 配置尚未在本轮训练，三个候选比较不能代替原始基线对照。
+
+## 标准 STGC refinement
+
+三个候选已各完成 1000 步并评估全部 51 帧，见 [refinement 后的最终报告](refinements/8120_standard_bce_20260918_1600/REPORT.md)。neural 的 CD 比标准历史值低 1.53%，深度 RMSE 和强度 RMSE 仍分别高 5.01%、2.79%；不能据单项 CD 宣称全面超过标准。
+
+用户授权补跑 refinement 后，使用独立入口对三个最终 EMA 主干依次执行标准 STGC 的原版 `Trainer.refine`：47 个训练帧、1000 步、BCE-only、Adam + OneCycleLR（max_lr=0.001）。这与改进源码中未执行的 BCE + depth-support 默认选项不同；本入口明确选择标准流程用于对照。
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python Modi01/refine.py \
+  --from-evaluation Modi01/evaluations/8120_final_20260918_1520 \
+  --output Modi01/refinements/<新目录>
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python Modi01/summarize_refinement.py \
+  Modi01/refinements/<新目录>
+```
+
+只更新 U-Net，并检查三个候选的初始 U-Net 完全一致、所有主干状态保持不变。原 checkpoint 保留，新权重写入独立目录；保存后重新严格载入，评估 4 帧开发集和 47 帧训练集。训练集复用同一冻结主干的完整帧渲染结果，开发集重新渲染并逐元素核对未掩码的深度/强度与 pre-refiner 结果相等。代码及协议在启动前保存独立副本，不以开发指标提前停止或选择训练步数。
 
 详见 `IMPLEMENTATION_REPORT.md` 和 `reports/` 的原始 JSON/日志。

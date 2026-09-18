@@ -1,0 +1,152 @@
+/home/zijiewu/Code/STGC-NeRF-private/Modi01/queues/8120_seed0_20260918_010810/source/audited/best_core/activation.py:8: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)  # cast to float32
+/home/zijiewu/Code/STGC-NeRF-private/Modi01/queues/8120_seed0_20260918_010810/source/audited/best_core/activation.py:15: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, g):
+/home/zijiewu/Code/STGC-NeRF-private/Modi01/queues/8120_seed0_20260918_010810/source/audited/data/base_dataset.py:15: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @torch.cuda.amp.autocast(enabled=False)
+Loaded compiled 3D CUDA chamfer distance
+Using sequence 8120-8170
+Using sequence 8120-8170
+Loading train data:   0%|          | 0/47 [00:00<?, ?it/s]Loading train data: 100%|██████████| 47/47 [00:00<00:00, 1536.54it/s]
+Using sequence 8120-8170
+Using sequence 8120-8170
+Loading val data:   0%|          | 0/4 [00:00<?, ?it/s]Loading val data: 100%|██████████| 4/4 [00:00<00:00, 1067.93it/s]
+Preparing for Raydrop Refinemet ...
+/home/zijiewu/Code/STGC-NeRF-private/Modi01/refinements/8120_standard_bce_20260918_1600/standard_runner.py:981: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=self.opt.fp16):
+/home/zijiewu/Code/STGC-NeRF-private/Modi01/queues/8120_seed0_20260918_010810/source/audited/best_core/scene_field.py:688: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 1, "seconds": 2.6536511960148346}
+1/47
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 2, "seconds": 3.0861536159936804}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 3, "seconds": 3.1811389029899146}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 4, "seconds": 3.180632378003793}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 5, "seconds": 3.180388048000168}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 6, "seconds": 3.178568372997688}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 7, "seconds": 3.181269794993568}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 8, "seconds": 3.1782223919872195}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 9, "seconds": 3.1796637939987704}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 10, "seconds": 3.1842340549919754}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 11, "seconds": 3.1842576780181844}
+11/47
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 12, "seconds": 3.1778426580131054}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 13, "seconds": 3.1831384130055085}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 14, "seconds": 3.1777376440004446}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 15, "seconds": 3.17971298500197}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 16, "seconds": 3.1786649630230386}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 17, "seconds": 3.178323088999605}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 18, "seconds": 3.1758259700145572}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 19, "seconds": 3.176954075024696}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 20, "seconds": 3.1776938929979224}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 21, "seconds": 3.1765139370108955}
+21/47
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 22, "seconds": 3.1744520229985937}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 23, "seconds": 3.1747541159857064}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 24, "seconds": 3.170512109005358}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 25, "seconds": 3.172845064982539}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 26, "seconds": 3.1714395789895207}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 27, "seconds": 3.169098126993049}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 28, "seconds": 3.174147983023431}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 29, "seconds": 3.172338670003228}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 30, "seconds": 3.1727149309881497}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 31, "seconds": 3.173337143001845}
+31/47
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 32, "seconds": 3.1747081769863144}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 33, "seconds": 3.174477570981253}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 34, "seconds": 3.17459097399842}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 35, "seconds": 3.18568078399403}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 36, "seconds": 3.177877209993312}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 37, "seconds": 3.1782303279906046}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 38, "seconds": 3.177821983001195}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 39, "seconds": 3.174396996968426}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 40, "seconds": 3.1734575890004635}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 41, "seconds": 3.1718779070070013}
+41/47
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 42, "seconds": 3.173715609998908}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 43, "seconds": 3.170482372981496}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 44, "seconds": 3.168721643043682}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 45, "seconds": 3.172324771003332}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 46, "seconds": 3.075937988003716}
+{"phase": "PREPARING_TRAIN_RENDERS", "frame": 47, "seconds": 2.3970787409925833}
+Start UNet Optimization ...
+[2026-09-18 16:04:10] iter:0, lr:0.000040, raydrop loss:0.6708554625511169
+[2026-09-18 16:04:18] iter:50, lr:0.000105, raydrop loss:0.3656405806541443
+[2026-09-18 16:04:26] iter:100, lr:0.000281, raydrop loss:0.30355408787727356
+[2026-09-18 16:04:35] iter:150, lr:0.000523, raydrop loss:0.24887272715568542
+[2026-09-18 16:04:43] iter:200, lr:0.000763, raydrop loss:0.19186288118362427
+[2026-09-18 16:04:51] iter:250, lr:0.000938, raydrop loss:0.16241052746772766
+[2026-09-18 16:05:00] iter:300, lr:0.001000, raydrop loss:0.11595382541418076
+[2026-09-18 16:05:08] iter:350, lr:0.000987, raydrop loss:0.09762009233236313
+[2026-09-18 16:05:16] iter:400, lr:0.000950, raydrop loss:0.08655915409326553
+[2026-09-18 16:05:24] iter:450, lr:0.000890, raydrop loss:0.07363700866699219
+[2026-09-18 16:05:33] iter:500, lr:0.000810, raydrop loss:0.07016072422266006
+[2026-09-18 16:05:41] iter:550, lr:0.000715, raydrop loss:0.059303998947143555
+[2026-09-18 16:05:49] iter:600, lr:0.000609, raydrop loss:0.05638042464852333
+[2026-09-18 16:05:58] iter:650, lr:0.000498, raydrop loss:0.051246512681245804
+[2026-09-18 16:06:06] iter:700, lr:0.000387, raydrop loss:0.04940144717693329
+[2026-09-18 16:06:14] iter:750, lr:0.000281, raydrop loss:0.047856610268354416
+[2026-09-18 16:06:23] iter:800, lr:0.000187, raydrop loss:0.045524612069129944
+[2026-09-18 16:06:31] iter:850, lr:0.000108, raydrop loss:0.044471707195043564
+[2026-09-18 16:06:39] iter:900, lr:0.000049, raydrop loss:0.04329643398523331
+[2026-09-18 16:06:48] iter:950, lr:0.000012, raydrop loss:0.04224831238389015
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+/home/zijiewu/Code/STGC-NeRF-private/.venv/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/zijiewu/Code/STGC-NeRF-private/.venv/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Loading model from: /home/zijiewu/Code/STGC-NeRF-private/.venv/lib/python3.9/site-packages/lpips/weights/v0.1/alex.pth
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /home/zijiewu/Code/STGC-NeRF-private/.venv/lib/python3.9/site-packages/lpips/weights/v0.1/alex.pth
+/home/zijiewu/Code/STGC-NeRF-private/Modi01/refinements/8120_standard_bce_20260918_1600/refine_source.py:221: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), torch.cuda.amp.autocast(enabled=opt.fp16):
+{"phase": "EVALUATING", "split": "development", "frame": 1, "total": 4, "cd": 0.08932322263717651}
+{"phase": "EVALUATING", "split": "development", "frame": 2, "total": 4, "cd": 0.05476345121860504}
+{"phase": "EVALUATING", "split": "development", "frame": 3, "total": 4, "cd": 0.1200147271156311}
+{"phase": "EVALUATING", "split": "development", "frame": 4, "total": 4, "cd": 0.06472882628440857}
+{"phase": "EVALUATING", "split": "train", "frame": 1, "total": 47, "cd": 0.09400792419910431}
+{"phase": "EVALUATING", "split": "train", "frame": 2, "total": 47, "cd": 0.0650143027305603}
+{"phase": "EVALUATING", "split": "train", "frame": 3, "total": 47, "cd": 0.05554772913455963}
+{"phase": "EVALUATING", "split": "train", "frame": 4, "total": 47, "cd": 0.057276420295238495}
+{"phase": "EVALUATING", "split": "train", "frame": 5, "total": 47, "cd": 0.05596304312348366}
+{"phase": "EVALUATING", "split": "train", "frame": 6, "total": 47, "cd": 0.05333445221185684}
+{"phase": "EVALUATING", "split": "train", "frame": 7, "total": 47, "cd": 0.04640715569257736}
+{"phase": "EVALUATING", "split": "train", "frame": 8, "total": 47, "cd": 0.05382533371448517}
+{"phase": "EVALUATING", "split": "train", "frame": 9, "total": 47, "cd": 0.07834209501743317}
+{"phase": "EVALUATING", "split": "train", "frame": 10, "total": 47, "cd": 0.04944542050361633}
+{"phase": "EVALUATING", "split": "train", "frame": 11, "total": 47, "cd": 0.04976915568113327}
+{"phase": "EVALUATING", "split": "train", "frame": 12, "total": 47, "cd": 0.050783365964889526}
+{"phase": "EVALUATING", "split": "train", "frame": 13, "total": 47, "cd": 0.058271631598472595}
+{"phase": "EVALUATING", "split": "train", "frame": 14, "total": 47, "cd": 0.047819554805755615}
+{"phase": "EVALUATING", "split": "train", "frame": 15, "total": 47, "cd": 0.04444679617881775}
+{"phase": "EVALUATING", "split": "train", "frame": 16, "total": 47, "cd": 0.03652714937925339}
+{"phase": "EVALUATING", "split": "train", "frame": 17, "total": 47, "cd": 0.035562820732593536}
+{"phase": "EVALUATING", "split": "train", "frame": 18, "total": 47, "cd": 0.04759835824370384}
+{"phase": "EVALUATING", "split": "train", "frame": 19, "total": 47, "cd": 0.04151129350066185}
+{"phase": "EVALUATING", "split": "train", "frame": 20, "total": 47, "cd": 0.03731821849942207}
+{"phase": "EVALUATING", "split": "train", "frame": 21, "total": 47, "cd": 0.05603237450122833}
+{"phase": "EVALUATING", "split": "train", "frame": 22, "total": 47, "cd": 0.043317437171936035}
+{"phase": "EVALUATING", "split": "train", "frame": 23, "total": 47, "cd": 0.042537786066532135}
+{"phase": "EVALUATING", "split": "train", "frame": 24, "total": 47, "cd": 0.04553607851266861}
+{"phase": "EVALUATING", "split": "train", "frame": 25, "total": 47, "cd": 0.042361099272966385}
+{"phase": "EVALUATING", "split": "train", "frame": 26, "total": 47, "cd": 0.060591112822294235}
+{"phase": "EVALUATING", "split": "train", "frame": 27, "total": 47, "cd": 0.04738437384366989}
+{"phase": "EVALUATING", "split": "train", "frame": 28, "total": 47, "cd": 0.06378976255655289}
+{"phase": "EVALUATING", "split": "train", "frame": 29, "total": 47, "cd": 0.03788793832063675}
+{"phase": "EVALUATING", "split": "train", "frame": 30, "total": 47, "cd": 0.04242207109928131}
+{"phase": "EVALUATING", "split": "train", "frame": 31, "total": 47, "cd": 0.03250275179743767}
+{"phase": "EVALUATING", "split": "train", "frame": 32, "total": 47, "cd": 0.04117094725370407}
+{"phase": "EVALUATING", "split": "train", "frame": 33, "total": 47, "cd": 0.03671595826745033}
+{"phase": "EVALUATING", "split": "train", "frame": 34, "total": 47, "cd": 0.03802682086825371}
+{"phase": "EVALUATING", "split": "train", "frame": 35, "total": 47, "cd": 0.04221397638320923}
+{"phase": "EVALUATING", "split": "train", "frame": 36, "total": 47, "cd": 0.04217074438929558}
+{"phase": "EVALUATING", "split": "train", "frame": 37, "total": 47, "cd": 0.04514850676059723}
+{"phase": "EVALUATING", "split": "train", "frame": 38, "total": 47, "cd": 0.03449741378426552}
+{"phase": "EVALUATING", "split": "train", "frame": 39, "total": 47, "cd": 0.037637412548065186}
+{"phase": "EVALUATING", "split": "train", "frame": 40, "total": 47, "cd": 0.044884003698825836}
+{"phase": "EVALUATING", "split": "train", "frame": 41, "total": 47, "cd": 0.06139291822910309}
+{"phase": "EVALUATING", "split": "train", "frame": 42, "total": 47, "cd": 0.056211523711681366}
+{"phase": "EVALUATING", "split": "train", "frame": 43, "total": 47, "cd": 0.04904226213693619}
+{"phase": "EVALUATING", "split": "train", "frame": 44, "total": 47, "cd": 0.04272323101758957}
+{"phase": "EVALUATING", "split": "train", "frame": 45, "total": 47, "cd": 0.03774531930685043}
+{"phase": "EVALUATING", "split": "train", "frame": 46, "total": 47, "cd": 0.033159296959638596}
+{"phase": "EVALUATING", "split": "train", "frame": 47, "total": 47, "cd": 0.033181410282850266}
