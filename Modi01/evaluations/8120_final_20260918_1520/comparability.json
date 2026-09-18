@@ -1,0 +1,8 @@
+{
+  "configuration_differences_excluding_paths": {},
+  "archived_audited_python_files_compared": 63,
+  "audited_source_differences": [],
+  "archived_modi_source_differences": [],
+  "comparison_method": "direct content comparison, no digests",
+  "val_equals_test": true
+}

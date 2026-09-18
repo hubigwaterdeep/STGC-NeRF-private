@@ -1,0 +1,8 @@
+{
+  "variant": "hybrid44",
+  "workspace": "/home/zijiewu/Code/STGC-NeRF-private/Modi01/runs/8120/hybrid44_8120_seed0_20260918_010128",
+  "checkpoint": "/home/zijiewu/Code/STGC-NeRF-private/Modi01/runs/8120/hybrid44_8120_seed0_20260918_010128/checkpoints/stgc_nerf_ep0639.pth",
+  "modi_source": "/home/zijiewu/Code/STGC-NeRF-private/Modi01/launches/hybrid44_8120_seed0_20260918_010128/source/Modi01",
+  "audited_source": "/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source",
+  "output": "/home/zijiewu/Code/STGC-NeRF-private/Modi01/evaluations/8120_final_20260918_1520/hybrid44"
+}

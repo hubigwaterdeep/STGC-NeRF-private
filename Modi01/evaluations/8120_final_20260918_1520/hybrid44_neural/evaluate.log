@@ -1,0 +1,80 @@
+/home/zijiewu/Code/STGC-NeRF-private/Modi01/queues/8120_seed0_20260918_010810/source/audited/best_core/activation.py:8: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)  # cast to float32
+/home/zijiewu/Code/STGC-NeRF-private/Modi01/queues/8120_seed0_20260918_010810/source/audited/best_core/activation.py:15: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, g):
+/home/zijiewu/Code/STGC-NeRF-private/Modi01/queues/8120_seed0_20260918_010810/source/audited/data/base_dataset.py:15: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @torch.cuda.amp.autocast(enabled=False)
+Loaded compiled 3D CUDA chamfer distance
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+/home/zijiewu/Code/STGC-NeRF-private/.venv/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/zijiewu/Code/STGC-NeRF-private/.venv/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Loading model from: /home/zijiewu/Code/STGC-NeRF-private/.venv/lib/python3.9/site-packages/lpips/weights/v0.1/alex.pth
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /home/zijiewu/Code/STGC-NeRF-private/.venv/lib/python3.9/site-packages/lpips/weights/v0.1/alex.pth
+Using sequence 8120-8170
+Using sequence 8120-8170
+Loading val data:   0%|          | 0/4 [00:00<?, ?it/s]Loading val data: 100%|██████████| 4/4 [00:00<00:00, 2486.25it/s]
+Using sequence 8120-8170
+Using sequence 8120-8170
+Loading train data:   0%|          | 0/47 [00:00<?, ?it/s]Loading train data: 100%|██████████| 47/47 [00:00<00:00, 1674.12it/s]
+/home/zijiewu/Code/STGC-NeRF-private/Modi01/evaluate.py:190: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), torch.cuda.amp.autocast(enabled=opt.fp16):
+/home/zijiewu/Code/STGC-NeRF-private/Modi01/queues/8120_seed0_20260918_010810/source/audited/best_core/scene_field.py:688: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+{"variant": "hybrid44_neural", "weights": "ema", "split": "development", "frame": 1, "total": 4, "frame_id": 8130, "cd": 0.06982265412807465, "seconds": 5.51}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "development", "frame": 2, "total": 4, "frame_id": 8140, "cd": 0.053504616022109985, "seconds": 5.17}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "development", "frame": 3, "total": 4, "frame_id": 8150, "cd": 0.08059246093034744, "seconds": 5.17}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "development", "frame": 4, "total": 4, "frame_id": 8160, "cd": 0.06743578612804413, "seconds": 5.16}
+{"variant": "hybrid44_neural", "weights": "raw", "split": "development", "frame": 1, "total": 4, "frame_id": 8130, "cd": 0.07013136893510818, "seconds": 5.17}
+{"variant": "hybrid44_neural", "weights": "raw", "split": "development", "frame": 2, "total": 4, "frame_id": 8140, "cd": 0.05698811262845993, "seconds": 5.17}
+{"variant": "hybrid44_neural", "weights": "raw", "split": "development", "frame": 3, "total": 4, "frame_id": 8150, "cd": 0.0802353173494339, "seconds": 5.17}
+{"variant": "hybrid44_neural", "weights": "raw", "split": "development", "frame": 4, "total": 4, "frame_id": 8160, "cd": 0.061077166348695755, "seconds": 5.17}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 1, "total": 47, "frame_id": 8120, "cd": 0.0979878157377243, "seconds": 3.72}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 2, "total": 47, "frame_id": 8121, "cd": 0.0807616263628006, "seconds": 5.04}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 3, "total": 47, "frame_id": 8122, "cd": 0.05959358811378479, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 4, "total": 47, "frame_id": 8123, "cd": 0.07805041968822479, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 5, "total": 47, "frame_id": 8124, "cd": 0.06563276052474976, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 6, "total": 47, "frame_id": 8125, "cd": 0.06731362640857697, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 7, "total": 47, "frame_id": 8126, "cd": 0.053468070924282074, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 8, "total": 47, "frame_id": 8127, "cd": 0.06675922125577927, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 9, "total": 47, "frame_id": 8128, "cd": 0.07783214002847672, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 10, "total": 47, "frame_id": 8129, "cd": 0.05055786296725273, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 11, "total": 47, "frame_id": 8131, "cd": 0.053043872117996216, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 12, "total": 47, "frame_id": 8132, "cd": 0.0569060742855072, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 13, "total": 47, "frame_id": 8133, "cd": 0.04495587199926376, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 14, "total": 47, "frame_id": 8134, "cd": 0.050170835107564926, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 15, "total": 47, "frame_id": 8135, "cd": 0.056556738913059235, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 16, "total": 47, "frame_id": 8136, "cd": 0.04534795507788658, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 17, "total": 47, "frame_id": 8137, "cd": 0.04309725761413574, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 18, "total": 47, "frame_id": 8138, "cd": 0.04510742425918579, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 19, "total": 47, "frame_id": 8139, "cd": 0.043359942734241486, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 20, "total": 47, "frame_id": 8141, "cd": 0.03901311010122299, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 21, "total": 47, "frame_id": 8142, "cd": 0.048673711717128754, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 22, "total": 47, "frame_id": 8143, "cd": 0.0439644455909729, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 23, "total": 47, "frame_id": 8144, "cd": 0.04351513087749481, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 24, "total": 47, "frame_id": 8145, "cd": 0.056426264345645905, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 25, "total": 47, "frame_id": 8146, "cd": 0.05093792825937271, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 26, "total": 47, "frame_id": 8147, "cd": 0.05600614845752716, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 27, "total": 47, "frame_id": 8148, "cd": 0.07262135297060013, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 28, "total": 47, "frame_id": 8149, "cd": 0.0707465186715126, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 29, "total": 47, "frame_id": 8151, "cd": 0.03646407276391983, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 30, "total": 47, "frame_id": 8152, "cd": 0.043307989835739136, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 31, "total": 47, "frame_id": 8153, "cd": 0.035787489265203476, "seconds": 5.14}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 32, "total": 47, "frame_id": 8154, "cd": 0.039814941585063934, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 33, "total": 47, "frame_id": 8155, "cd": 0.04281953349709511, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 34, "total": 47, "frame_id": 8156, "cd": 0.04054321348667145, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 35, "total": 47, "frame_id": 8157, "cd": 0.05273246765136719, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 36, "total": 47, "frame_id": 8158, "cd": 0.04716377705335617, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 37, "total": 47, "frame_id": 8159, "cd": 0.05052446946501732, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 38, "total": 47, "frame_id": 8161, "cd": 0.043318670243024826, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 39, "total": 47, "frame_id": 8162, "cd": 0.03705596923828125, "seconds": 5.13}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 40, "total": 47, "frame_id": 8163, "cd": 0.06032249331474304, "seconds": 5.12}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 41, "total": 47, "frame_id": 8164, "cd": 0.05996411293745041, "seconds": 5.12}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 42, "total": 47, "frame_id": 8165, "cd": 0.0539441742002964, "seconds": 5.12}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 43, "total": 47, "frame_id": 8166, "cd": 0.055606793612241745, "seconds": 5.12}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 44, "total": 47, "frame_id": 8167, "cd": 0.05089537054300308, "seconds": 5.12}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 45, "total": 47, "frame_id": 8168, "cd": 0.04506094381213188, "seconds": 5.12}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 46, "total": 47, "frame_id": 8169, "cd": 0.041856974363327026, "seconds": 5.02}
+{"variant": "hybrid44_neural", "weights": "ema", "split": "train", "frame": 47, "total": 47, "frame_id": 8170, "cd": 0.0377555787563324, "seconds": 3.71}

@@ -58,6 +58,17 @@ PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m Modi01.train \
 
 默认全 modal、4/4 tied、4/4 untied 的 hash 表总量完全一致。neural 的 decoder/embedding 计入预算；受 TCNN 表大小二次幂粒度限制，默认总场景场比对照少 64,508 个参数。没有用闲置参数补齐容量；因此 neural 与 untied 的差异不能全部归因于表示形式。
 
-本轮只运行了合成数据的代码验证和有明确步数上限的性能测试。实际场景训练、CD/F-score/depth RMSE/intensity RMSE/return 指标仍待运行。历史已观察场景按 post-hoc development 处理；legacy val/test 使用相同帧，不能宣称拥有未见测试集。正式结果还须区分 raw/EMA、pre/post-refiner，并在可靠标签存在时分 moving/static/edge/range 层报告；缺标签时明确标为 unavailable。
+初次实现时仅运行合成验证；用户随后授权的三个 8120 / seed 0 实验均已完成 30,000 步。最终联合评估使用以下独立入口，依次运行每个方法的 EMA 开发集、raw 开发集和 EMA 完整训练集；不更新参数或 checkpoint。输入由 `current_queue.json` 定位，也可用 `--queue` 指定已完成队列。
+
+2026-09-18 已完成全部 165 次帧评估，结果见 [最终评估报告](evaluations/8120_final_20260918_1520/REPORT.md)。neural 的五类核心开发指标均值最佳；该结论限于三个候选、单场景单 seed。
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python Modi01/evaluate.py \
+  --output Modi01/evaluations/<新目录>
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python Modi01/summarize_evaluation.py \
+  Modi01/evaluations/<新目录>
+```
+
+每个方法在独立进程中载入其归档源码和最终 checkpoint，调用原 Trainer 的评估步骤及指标。输出包含主表、逐帧 CSV、距离/深度边缘诊断和开发帧原始预测。历史已观察场景按 post-hoc development 处理；legacy val/test 使用相同帧，不能宣称拥有未见测试集。当前 refiner 未训练，因此只评估 pre-refiner；缺少 moving/static 标签时明确标为 unavailable。all-modal 配置尚未在本轮训练，三个候选比较不能代替原始基线对照。
 
 详见 `IMPLEMENTATION_REPORT.md` 和 `reports/` 的原始 JSON/日志。

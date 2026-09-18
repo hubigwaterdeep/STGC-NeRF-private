@@ -1,0 +1,80 @@
+/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/best_core/activation.py:8: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)  # cast to float32
+/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/best_core/activation.py:15: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, g):
+/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/data/base_dataset.py:15: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @torch.cuda.amp.autocast(enabled=False)
+Loaded compiled 3D CUDA chamfer distance
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+/home/zijiewu/Code/STGC-NeRF-private/.venv/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/zijiewu/Code/STGC-NeRF-private/.venv/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Loading model from: /home/zijiewu/Code/STGC-NeRF-private/.venv/lib/python3.9/site-packages/lpips/weights/v0.1/alex.pth
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /home/zijiewu/Code/STGC-NeRF-private/.venv/lib/python3.9/site-packages/lpips/weights/v0.1/alex.pth
+Using sequence 8120-8170
+Using sequence 8120-8170
+Loading val data:   0%|          | 0/4 [00:00<?, ?it/s]Loading val data: 100%|██████████| 4/4 [00:00<00:00, 2387.88it/s]
+Using sequence 8120-8170
+Using sequence 8120-8170
+Loading train data:   0%|          | 0/47 [00:00<?, ?it/s]Loading train data: 100%|██████████| 47/47 [00:00<00:00, 1637.72it/s]
+/home/zijiewu/Code/STGC-NeRF-private/Modi01/evaluate.py:190: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), torch.cuda.amp.autocast(enabled=opt.fp16):
+/home/zijiewu/Code/STGC-NeRF-private/reports/logs/intensity_fit_diagnosis_20260916/source/best_core/scene_field.py:688: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+{"variant": "hybrid44", "weights": "ema", "split": "development", "frame": 1, "total": 4, "frame_id": 8130, "cd": 0.07919855415821075, "seconds": 3.5}
+{"variant": "hybrid44", "weights": "ema", "split": "development", "frame": 2, "total": 4, "frame_id": 8140, "cd": 0.06033708527684212, "seconds": 3.17}
+{"variant": "hybrid44", "weights": "ema", "split": "development", "frame": 3, "total": 4, "frame_id": 8150, "cd": 0.10931495577096939, "seconds": 3.17}
+{"variant": "hybrid44", "weights": "ema", "split": "development", "frame": 4, "total": 4, "frame_id": 8160, "cd": 0.06338401883840561, "seconds": 3.17}
+{"variant": "hybrid44", "weights": "raw", "split": "development", "frame": 1, "total": 4, "frame_id": 8130, "cd": 0.08089275658130646, "seconds": 3.18}
+{"variant": "hybrid44", "weights": "raw", "split": "development", "frame": 2, "total": 4, "frame_id": 8140, "cd": 0.06064935028553009, "seconds": 3.18}
+{"variant": "hybrid44", "weights": "raw", "split": "development", "frame": 3, "total": 4, "frame_id": 8150, "cd": 0.10936911404132843, "seconds": 3.17}
+{"variant": "hybrid44", "weights": "raw", "split": "development", "frame": 4, "total": 4, "frame_id": 8160, "cd": 0.06830765306949615, "seconds": 3.17}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 1, "total": 47, "frame_id": 8120, "cd": 0.09488329291343689, "seconds": 2.4}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 2, "total": 47, "frame_id": 8121, "cd": 0.06155454367399216, "seconds": 3.04}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 3, "total": 47, "frame_id": 8122, "cd": 0.05849991738796234, "seconds": 3.15}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 4, "total": 47, "frame_id": 8123, "cd": 0.07583463191986084, "seconds": 3.15}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 5, "total": 47, "frame_id": 8124, "cd": 0.06438975781202316, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 6, "total": 47, "frame_id": 8125, "cd": 0.06343384087085724, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 7, "total": 47, "frame_id": 8126, "cd": 0.05743737891316414, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 8, "total": 47, "frame_id": 8127, "cd": 0.0578659251332283, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 9, "total": 47, "frame_id": 8128, "cd": 0.07449358701705933, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 10, "total": 47, "frame_id": 8129, "cd": 0.04689429700374603, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 11, "total": 47, "frame_id": 8131, "cd": 0.05296120047569275, "seconds": 3.15}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 12, "total": 47, "frame_id": 8132, "cd": 0.0502404049038887, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 13, "total": 47, "frame_id": 8133, "cd": 0.043826811015605927, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 14, "total": 47, "frame_id": 8134, "cd": 0.04350302368402481, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 15, "total": 47, "frame_id": 8135, "cd": 0.041731685400009155, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 16, "total": 47, "frame_id": 8136, "cd": 0.04235413670539856, "seconds": 3.15}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 17, "total": 47, "frame_id": 8137, "cd": 0.04225458204746246, "seconds": 3.15}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 18, "total": 47, "frame_id": 8138, "cd": 0.040116023272275925, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 19, "total": 47, "frame_id": 8139, "cd": 0.044390998780727386, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 20, "total": 47, "frame_id": 8141, "cd": 0.036867234855890274, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 21, "total": 47, "frame_id": 8142, "cd": 0.037300895899534225, "seconds": 3.15}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 22, "total": 47, "frame_id": 8143, "cd": 0.05134904012084007, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 23, "total": 47, "frame_id": 8144, "cd": 0.0471111461520195, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 24, "total": 47, "frame_id": 8145, "cd": 0.05339817702770233, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 25, "total": 47, "frame_id": 8146, "cd": 0.051840268075466156, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 26, "total": 47, "frame_id": 8147, "cd": 0.06285914778709412, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 27, "total": 47, "frame_id": 8148, "cd": 0.07171684503555298, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 28, "total": 47, "frame_id": 8149, "cd": 0.06294821947813034, "seconds": 3.15}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 29, "total": 47, "frame_id": 8151, "cd": 0.034484051167964935, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 30, "total": 47, "frame_id": 8152, "cd": 0.042165257036685944, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 31, "total": 47, "frame_id": 8153, "cd": 0.03770999610424042, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 32, "total": 47, "frame_id": 8154, "cd": 0.040899328887462616, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 33, "total": 47, "frame_id": 8155, "cd": 0.04797904193401337, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 34, "total": 47, "frame_id": 8156, "cd": 0.039648279547691345, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 35, "total": 47, "frame_id": 8157, "cd": 0.04896313697099686, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 36, "total": 47, "frame_id": 8158, "cd": 0.042824290692806244, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 37, "total": 47, "frame_id": 8159, "cd": 0.04873155802488327, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 38, "total": 47, "frame_id": 8161, "cd": 0.03821001946926117, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 39, "total": 47, "frame_id": 8162, "cd": 0.03706928715109825, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 40, "total": 47, "frame_id": 8163, "cd": 0.04580081254243851, "seconds": 3.14}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 41, "total": 47, "frame_id": 8164, "cd": 0.046766720712184906, "seconds": 3.13}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 42, "total": 47, "frame_id": 8165, "cd": 0.05432361364364624, "seconds": 3.13}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 43, "total": 47, "frame_id": 8166, "cd": 0.04880533739924431, "seconds": 3.13}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 44, "total": 47, "frame_id": 8167, "cd": 0.05313314497470856, "seconds": 3.13}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 45, "total": 47, "frame_id": 8168, "cd": 0.05272936075925827, "seconds": 3.13}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 46, "total": 47, "frame_id": 8169, "cd": 0.03990085422992706, "seconds": 3.04}
+{"variant": "hybrid44", "weights": "ema", "split": "train", "frame": 47, "total": 47, "frame_id": 8170, "cd": 0.038137584924697876, "seconds": 2.39}
