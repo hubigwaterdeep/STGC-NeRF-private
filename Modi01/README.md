@@ -62,6 +62,8 @@ PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m Modi01.train \
 
 2026-09-18 已完成全部 165 次帧评估，结果见 [最终评估报告](evaluations/8120_final_20260918_1520/REPORT.md)。neural 的五类核心开发指标均值最佳；该结论限于三个候选、单场景单 seed。
 
+[标准 STGC 历史结果对照](evaluations/8120_final_20260918_1520/STANDARD_STGC_COMPARISON.md)：neural 仍未超过标准历史数值，且历史标准经过 refinement、本次候选未经过 refinement，不能作为同阶段架构对照。`all_modal` 是改进架构的消融配置，不是标准 STGC。
+
 ```bash
 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python Modi01/evaluate.py \
   --output Modi01/evaluations/<新目录>

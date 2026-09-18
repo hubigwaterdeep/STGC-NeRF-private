@@ -4,6 +4,8 @@
 
 本轮优先保留 neural 作为后续候选：五类核心指标的 EMA 开发集均值均最好。
 
+补充：[与标准 STGC 的历史结果比较](STANDARD_STGC_COMPARISON.md)。标准历史结果经过 refinement，本次候选尚未训练 refiner；neural 的数值仍未超过该标准结果，不能把候选内部排名当作超过标准 STGC 的证据。
+
 ## 结论依据
 
 - Hybrid 4/4（untied） 相对 tied：CD +2.60%，深度 RMSE +2.31%，强度 RMSE +3.24%，点云 F-score -1.490 个百分点，回波 F1 -0.190 个百分点。
